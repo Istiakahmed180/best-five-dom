@@ -10,7 +10,7 @@ function display(loop) {
         <th>${i + 1}:</th>
         <td>${elementName}</td>
         `;
-        playerBody.appendChild(tr)
+        playerBody.appendChild(tr);
     }
 }
 function btnClick(element) {
@@ -22,6 +22,8 @@ function btnClick(element) {
     playerNameArray.push(playerObject);
     display(playerNameArray);
     document.getElementById("selected-player").innerText = playerNameArray.length;
+
+    element.disabled = true;
 }
 
 document.getElementById("calculate").addEventListener("click", function () {
